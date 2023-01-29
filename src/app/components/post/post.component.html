@@ -1,8 +1,8 @@
 
-<h1 >Post Somthing</h1>
+<h1 class="title">Post Somthing</h1>
 
 
-<form [formGroup]="postForm" (ngSubmit)="shareIt()">
+<form class="form" [formGroup]="postForm" (ngSubmit)="shareIt()">
 
     <label for="username" [formControl]="postForm.controls.username">Username: </label>
     <input type="text" id="username" name="username" /><br />
@@ -15,5 +15,5 @@
     ></textarea>
     <input type="file" id="lname" name="lname" /><br />
   
-    <input type="submit" value="Share" />
+    <button class="button" type="submit" value="Share" >Share</button>
   </form>

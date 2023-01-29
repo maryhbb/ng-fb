@@ -1,0 +1,10 @@
+.title{ 
+text-align: center;
+}
+.form {
+    margin: 30px;
+}
+.button {
+    font-style: bold;
+    font-weight: 800;
+}
