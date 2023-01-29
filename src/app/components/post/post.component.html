@@ -2,16 +2,16 @@
 <h1 >Post Somthing</h1>
 
 
-<form [formGroup]="tweetForm" (ngSubmit)="shareIt()">
+<form [formGroup]="postForm" (ngSubmit)="shareIt()">
 
-    <label for="username" [formControl]="tweetForm.controls.username">Username: </label>
+    <label for="username" [formControl]="postForm.controls.username">Username: </label>
     <input type="text" id="username" name="username" /><br />
   
-    <label for="datetime-local" [formControl]="tweetForm.controls.date" >Date: </label>
+    <label for="datetime-local" [formControl]="postForm.controls.date" >Date: </label>
     <input type="datetime-local" id="datetime-local" name="date" /><br />
     <textarea
       placeholder="what's happening?"
-      [formControl]="tweetForm.controls.message" cols="50" rows="20"
+      [formControl]="postForm.controls.message" cols="50" rows="20"
     ></textarea>
     <input type="file" id="lname" name="lname" /><br />
   
