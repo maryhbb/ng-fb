@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-post',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class PostComponent {
 
+  postForm = new FormGroup({
+    username: new FormControl(),
+    date: new FormControl(),
+    message: new FormControl(),
+  })
+tweetForm: any;
+
+  shareIt() : void {
+    console.log(this.postForm.value);
+    
+  }
 }
