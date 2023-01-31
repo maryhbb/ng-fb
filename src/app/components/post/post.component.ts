@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { DataserviceService } from 'src/app/servieces/dataservice.service';
 
 @Component({
   selector: 'app-post',
@@ -7,13 +8,13 @@ import { FormControl, FormGroup } from '@angular/forms';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent {
+  constructor(private dataService : DataserviceService ){}
 
   postForm = new FormGroup({
     username: new FormControl(),
     date: new FormControl(),
     message: new FormControl(),
   })
-tweetForm: any;
 
   shareIt() : void {
     console.log(this.postForm.value);
