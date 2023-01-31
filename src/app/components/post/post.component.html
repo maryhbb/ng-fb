@@ -5,13 +5,13 @@
 <form class="form" [formGroup]="postForm" (ngSubmit)="shareIt()">
 
     <label for="username" >Username: </label>
-    <input type="text" id="username" [formControl]="postForm.controls.username" /><br />
+    <input type="text" id="username" formControlName="username" /><br />
   
     <label for="datetime-local" >Date: </label>
-    <input type="datetime-local" id="datetime-local" [formControl]="postForm.controls.date" /><br />
+    <input type="datetime-local" id="datetime-local" formControlName="date" /><br />
     <textarea
       placeholder="what's happening?"
-      [formControl]="postForm.controls.message" cols="50" rows="20"
+      formControlName="message" cols="50" rows="20"
     ></textarea>
     <input type="file" id="lname" name="lname" /><br />
   
