@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { DataserviceService } from 'src/app/servieces/dataservice.service';
 
@@ -7,26 +7,25 @@ import { DataserviceService } from 'src/app/servieces/dataservice.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
-export class PostComponent implements OnInit {
-  postForm!: FormGroup;
+export class PostComponent {
+ 
 
   constructor(private dataService: DataserviceService) { }
 
-  ngOnInit(): void {
-    this.postForm = new FormGroup({
-      username: new FormControl(''),
-      date: new FormControl(''),
-      message: new FormControl('')
+
+  postForm: FormGroup= new FormGroup({
+    username: new FormControl(''),
+    date: new FormControl(''),
+    message: new FormControl('')
+
+
+    
     });
-  }
+ 
 
   shareIt(): void {
     console.log(this.postForm.value);
-    this.dataService.posts.push({
-      username: this.postForm.value.username,
-      date: this.postForm.value.date,
-      message: this.postForm.value.message
-    });
+    this.dataService.posts.push(this.postForm.value);
     console.log(this.dataService.posts)
   }
 }
