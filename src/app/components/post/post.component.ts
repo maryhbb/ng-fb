@@ -7,6 +7,7 @@ import { DataserviceService } from 'src/app/servieces/dataservice.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css'],
 })
+
 export class PostComponent {
   constructor(private dataService: DataserviceService) {}
 
