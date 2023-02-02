@@ -7,6 +7,7 @@ import { DataserviceService } from 'src/app/servieces/dataservice.service';
   templateUrl: './post.component.html',
   styleUrls: ['./post.component.css']
 })
+
 export class PostComponent  {
  
   constructor(private dataService: DataserviceService) { }
@@ -16,10 +17,7 @@ export class PostComponent  {
     date: new FormControl(''),
     message: new FormControl('')
   });
-
-
-
-
+  
   shareIt(): void {
     console.log(this.postForm.value);
     this.dataService.posts.push(this.postForm.value);
